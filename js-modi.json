@@ -677,7 +677,7 @@
                     "to": [
                         {
                             "key_code": "tab",
-                            "modifier": "left_control"
+                            "modifier": "left_command"
                         }
                     ],
                     "type": "basic"

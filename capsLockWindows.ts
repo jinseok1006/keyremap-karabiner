@@ -53,7 +53,7 @@ export const switchDesktopReplacementKeysWindows: Manipulator[] =
 export const taskViewWindows: Manipulator = {
   conditions: [capsLockPressed, frontmostAppIfRemote],
   from: { key_code: "spacebar" },
-  to: [{ key_code: "tab", modifier: "left_control" }],
+  to: [{ key_code: "tab", modifier: "left_command" }],
   type: "basic",
 };
 
@@ -61,6 +61,6 @@ export const taskViewWindows: Manipulator = {
 export const fullscreenWindows: Manipulator = {
   conditions: [capsLockPressed, frontmostAppIfRemote],
   from: { key_code: "e" },
-  to: [{ key_code: "up_arrow", modifier: "left_control" }],
+  to: [{ key_code: "up_arrow", modifier: "left_command" }],
   type: "basic",
 };

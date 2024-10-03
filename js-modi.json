@@ -681,6 +681,31 @@
                         }
                     ],
                     "type": "basic"
+                },
+                {
+                    "conditions": [
+                        {
+                            "name": "caps_lock_pressed",
+                            "value": 1,
+                            "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_if"
+                        }
+                    ],
+                    "from": {
+                        "key_code": "e"
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifier": "left_command"
+                        }
+                    ],
+                    "type": "basic"
                 }
             ]
         }

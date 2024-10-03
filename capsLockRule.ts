@@ -6,6 +6,7 @@ import {
 import {
   HomeEndReplacementKeysWindows,
   capsLockLeftControlWindows,
+  fullscreenWindows,
   switchDesktopReplacementKeysWindows,
   taskViewWindows,
 } from "./capsLockWindows";
@@ -28,7 +29,8 @@ const rule: Rule = {
     capsLockLeftControlWindows,
     ...shortcutReplacementKeys,
     ...switchDesktopReplacementKeysWindows,
-    taskViewWindows
+    taskViewWindows,
+    fullscreenWindows
   ],
 };
 

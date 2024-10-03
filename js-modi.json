@@ -677,7 +677,9 @@
                     "to": [
                         {
                             "key_code": "tab",
-                            "modifier": "left_command"
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "type": "basic"
@@ -702,7 +704,9 @@
                     "to": [
                         {
                             "key_code": "up_arrow",
-                            "modifier": "left_command"
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "type": "basic"

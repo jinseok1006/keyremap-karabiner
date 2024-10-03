@@ -2,6 +2,30 @@
     "title": "Jinseok's Modification",
     "rules": [
         {
+            "description": "ko en conversion",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_option"
+                    },
+                    "to": [
+                        {
+                            "key_code": "f13"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "description": "Swap Left Cmd and Left Alt keys",
             "manipulators": [
                 {
@@ -257,6 +281,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ],
                     "from": {
@@ -338,6 +368,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_if"
                         }
                     ],
                     "from": {
@@ -519,6 +555,87 @@
                                 "left_control",
                                 "left_command"
                             ]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "conditions": [
+                        {
+                            "name": "caps_lock_pressed",
+                            "value": 1,
+                            "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_if"
+                        }
+                    ],
+                    "from": {
+                        "key_code": "2"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_control",
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "conditions": [
+                        {
+                            "name": "caps_lock_pressed",
+                            "value": 1,
+                            "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_if"
+                        }
+                    ],
+                    "from": {
+                        "key_code": "3"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_contorl",
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "conditions": [
+                        {
+                            "name": "caps_lock_pressed",
+                            "value": 1,
+                            "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_if"
+                        }
+                    ],
+                    "from": {
+                        "key_code": "spacebar"
+                    },
+                    "to": [
+                        {
+                            "key_code": "tap",
+                            "modifier": "left_control"
                         }
                     ],
                     "type": "basic"

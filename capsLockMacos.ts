@@ -22,7 +22,7 @@ export const HomeEndReplacementKeys: Manipulator[] = homeEndKeyMappings.map(
 );
 
 export const capsLockLeftOpt: Manipulator = {
-  conditions: [capsLockPressed],
+  conditions: [capsLockPressed, frontmostAppUnless],
   from: { key_code: "q", modifiers: { optional: ["any"] } },
   to: [{ key_code: "left_option" }],
   type: "basic",

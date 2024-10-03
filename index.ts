@@ -1,11 +1,12 @@
 import fs from "fs";
 import swpCmdOptRule from "./swpCmdOptRule";
 import capsLockRule from "./capsLockRule";
+import koEnConversionRule from "./koEnConversionRule";
 import type { Modification } from "./types";
 
 const modification: Modification = {
   title: "Jinseok's Modification",
-  rules: [swpCmdOptRule, capsLockRule],
+  rules: [koEnConversionRule, swpCmdOptRule, capsLockRule],
 };
 
 const data = JSON.stringify(modification, null, 4);

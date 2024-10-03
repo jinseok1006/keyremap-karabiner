@@ -6,6 +6,8 @@ import {
 import {
   HomeEndReplacementKeysWindows,
   capsLockLeftControlWindows,
+  switchDesktopReplacementKeysWindows,
+  taskViewWindows,
 } from "./capsLockWindows";
 import {
   HomeEndReplacementKeys,
@@ -25,7 +27,8 @@ const rule: Rule = {
     ...HomeEndReplacementKeysWindows,
     capsLockLeftControlWindows,
     ...shortcutReplacementKeys,
-    
+    ...switchDesktopReplacementKeysWindows,
+    taskViewWindows
   ],
 };
 

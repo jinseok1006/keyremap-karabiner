@@ -16,12 +16,11 @@ export const HomeEndReplacementKeysWindows: Manipulator[] =
   }));
 
 export const capsLockLeftControlWindows: Manipulator = {
-  conditions: [capsLockPressed],
+  conditions: [capsLockPressed, frontmostAppIf],
   from: { key_code: "q", modifiers: { optional: ["any"] } },
   to: [{ key_code: "left_control" }],
   type: "basic",
 };
-
 
 // const shortcutKeyMappings = [
 //   "2", // prev desktop
@@ -33,21 +32,28 @@ export const capsLockLeftControlWindows: Manipulator = {
 //   "spacebar", // mission control
 // ];
 
-// export const shortcutReplacementKeys: Manipulator[] = shortcutKeyMappings.map(
-//   (from) => ({
-//     conditions: [capsLockPressed],
-//     from: { key_code: from },
-//     to: [
-//       {
-//         key_code: from,
-//         modifiers: [
-//           "left_option",
-//           "left_shift",
-//           "left_control",
-//           "left_command",
-//         ],
-//       },
-//     ],
-//     type: "basic",
-//   })
-// );
+const switchDesktopMappings = [
+  { from: "2", to: ["left_arrow", "left_control", "left_command"] },
+  { from: "3", to: ["right_arrow", "left_contorl", "left_command"] },
+];
+
+export const switchDesktopReplacementKeysWindows: Manipulator[] =
+  switchDesktopMappings.map((mapping) => ({
+    conditions: [capsLockPressed, frontmostAppIf],
+    from: { key_code: mapping.from },
+    to: [
+      {
+        key_code: mapping.to[0],
+        modifiers: [mapping.to[1], mapping.to[2]],
+      },
+    ],
+    type: "basic",
+  }));
+
+export const taskViewWindows: Manipulator = {
+  conditions: [capsLockPressed, frontmostAppIf],
+  from: { key_code: "spacebar" },
+  to: [{ key_code: "tap", modifier: "left_control" }],
+  type: "basic",
+};
+

@@ -4,12 +4,12 @@ import type { Manipulator, Rule } from "./types";
 const leftCmd2LeftAlt: Manipulator = {
   type: "basic",
   from: {
-    key_code: "left_cmd",
+    key_code: "left_command",
   },
   to: [
     {
       repeat: true,
-      key_code: "left_alt",
+      key_code: "left_option",
     },
   ],
   conditions: [frontmostAppUnless],
@@ -18,12 +18,12 @@ const leftCmd2LeftAlt: Manipulator = {
 const leftAlt2LeftCmd: Manipulator = {
   type: "basic",
   from: {
-    key_code: "left_alt",
+    key_code: "left_option",
   },
   to: [
     {
       repeat: true,
-      key_code: "left_cmd",
+      key_code: "left_command",
     },
   ],
   conditions: [frontmostAppUnless],

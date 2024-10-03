@@ -7,12 +7,12 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "left_alt"
+                        "key_code": "left_option"
                     },
                     "to": [
                         {
                             "repeat": true,
-                            "key_code": "left_cmd"
+                            "key_code": "left_command"
                         }
                     ],
                     "conditions": [
@@ -27,12 +27,12 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "left_cmd"
+                        "key_code": "left_command"
                     },
                     "to": [
                         {
                             "repeat": true,
-                            "key_code": "left_alt"
+                            "key_code": "left_option"
                         }
                     ],
                     "conditions": [

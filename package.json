@@ -1,0 +1,16 @@
+{
+  "name": "karabiner",
+  "version": "1.0.0",
+  "description": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/forstackup/karabiner-test/master/karabiner.json",
+  "main": "karabiner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.7.4"
+  }
+}

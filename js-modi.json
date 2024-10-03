@@ -397,6 +397,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ],
                     "from": {
@@ -421,6 +427,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ],
                     "from": {
@@ -445,6 +457,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ],
                     "from": {
@@ -469,6 +487,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ],
                     "from": {
@@ -493,6 +517,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ],
                     "from": {
@@ -517,6 +547,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ],
                     "from": {
@@ -541,6 +577,12 @@
                             "name": "caps_lock_pressed",
                             "value": 1,
                             "type": "variable_if"
+                        },
+                        {
+                            "bundle_identifiers": [
+                                "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ],
                     "from": {

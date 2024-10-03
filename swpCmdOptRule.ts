@@ -1,7 +1,7 @@
-import { frontmostAppUnless } from "./appCondition";
+import { frontmostAppUnlessRemote } from "./frontmostAppCondition";
 import type { Manipulator, Rule } from "./types";
 
-const leftCmd2LeftAlt: Manipulator = {
+const leftCmd2LeftOpt: Manipulator = {
   type: "basic",
   from: {
     key_code: "left_command",
@@ -12,10 +12,10 @@ const leftCmd2LeftAlt: Manipulator = {
       key_code: "left_option",
     },
   ],
-  conditions: [frontmostAppUnless],
+  conditions: [frontmostAppUnlessRemote],
 };
 
-const leftAlt2LeftCmd: Manipulator = {
+const leftOpt2LeftCmd: Manipulator = {
   type: "basic",
   from: {
     key_code: "left_option",
@@ -26,14 +26,14 @@ const leftAlt2LeftCmd: Manipulator = {
       key_code: "left_command",
     },
   ],
-  conditions: [frontmostAppUnless],
+  conditions: [frontmostAppUnlessRemote],
 };
 
 
 
 const rule: Rule = {
   description: "Swap Left Cmd and Left Alt keys",
-  manipulators: [leftAlt2LeftCmd, leftCmd2LeftAlt],
+  manipulators: [leftOpt2LeftCmd, leftCmd2LeftOpt],
 };
 
 export default rule;

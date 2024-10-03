@@ -1,6 +1,6 @@
 import type { Manipulator } from "./types";
 import { capsLockPressed } from "./capsLockBase";
-import { frontmostAppIf } from "./appCondition";
+import { frontmostAppIfRemote } from "./frontmostAppCondition";
 
 const homeEndKeyMappingsForWindows = [
   { from: "i", to: "home" },
@@ -9,14 +9,14 @@ const homeEndKeyMappingsForWindows = [
 
 export const HomeEndReplacementKeysWindows: Manipulator[] =
   homeEndKeyMappingsForWindows.map((mapping) => ({
-    conditions: [capsLockPressed, frontmostAppIf],
+    conditions: [capsLockPressed, frontmostAppIfRemote],
     from: { key_code: mapping.from, modifiers: { optional: ["any"] } },
     to: [{ key_code: mapping.to }],
     type: "basic",
   }));
 
 export const capsLockLeftControlWindows: Manipulator = {
-  conditions: [capsLockPressed, frontmostAppIf],
+  conditions: [capsLockPressed, frontmostAppIfRemote],
   from: { key_code: "q", modifiers: { optional: ["any"] } },
   to: [{ key_code: "left_control" }],
   type: "basic",
@@ -39,7 +39,7 @@ const switchDesktopMappings = [
 
 export const switchDesktopReplacementKeysWindows: Manipulator[] =
   switchDesktopMappings.map((mapping) => ({
-    conditions: [capsLockPressed, frontmostAppIf],
+    conditions: [capsLockPressed, frontmostAppIfRemote],
     from: { key_code: mapping.from },
     to: [
       {
@@ -51,7 +51,7 @@ export const switchDesktopReplacementKeysWindows: Manipulator[] =
   }));
 
 export const taskViewWindows: Manipulator = {
-  conditions: [capsLockPressed, frontmostAppIf],
+  conditions: [capsLockPressed, frontmostAppIfRemote],
   from: { key_code: "spacebar" },
   to: [{ key_code: "tap", modifier: "left_control" }],
   type: "basic",

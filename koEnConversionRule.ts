@@ -1,4 +1,4 @@
-import { frontmostAppUnless } from "./appCondition";
+import { frontmostAppUnlessRemote } from "./frontmostAppCondition";
 import type { Manipulator, Rule } from "./types";
 
 const koEnConversion: Manipulator = {
@@ -11,7 +11,7 @@ const koEnConversion: Manipulator = {
       key_code: "f13",
     },
   ],
-  conditions: [frontmostAppUnless],
+  conditions: [frontmostAppUnlessRemote],
 };
 
 const rule: Rule = {

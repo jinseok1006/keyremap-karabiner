@@ -1,6 +1,6 @@
 import type { Manipulator } from "./types";
 import { capsLockPressed } from "./capsLockBase";
-import { frontmostAppUnless } from "./appCondition";
+import { frontmostAppUnlessRemote } from "./frontmostAppCondition";
 
 const homeEndKeyMappings = [
   { from: "i", to: ["left_arrow", "left_command"] },
@@ -9,7 +9,7 @@ const homeEndKeyMappings = [
 
 export const HomeEndReplacementKeys: Manipulator[] = homeEndKeyMappings.map(
   (mapping) => ({
-    conditions: [capsLockPressed, frontmostAppUnless],
+    conditions: [capsLockPressed, frontmostAppUnlessRemote],
     from: { key_code: mapping.from, modifiers: { optional: ["any"] } },
     to: [
       {
@@ -22,7 +22,7 @@ export const HomeEndReplacementKeys: Manipulator[] = homeEndKeyMappings.map(
 );
 
 export const capsLockLeftOpt: Manipulator = {
-  conditions: [capsLockPressed, frontmostAppUnless],
+  conditions: [capsLockPressed, frontmostAppUnlessRemote],
   from: { key_code: "q", modifiers: { optional: ["any"] } },
   to: [{ key_code: "left_option" }],
   type: "basic",
@@ -40,7 +40,7 @@ const shortcutKeyMappings = [
 
 export const shortcutReplacementKeys: Manipulator[] = shortcutKeyMappings.map(
   (from) => ({
-    conditions: [capsLockPressed],
+    conditions: [capsLockPressed, frontmostAppUnlessRemote],
     from: { key_code: from },
     to: [
       {

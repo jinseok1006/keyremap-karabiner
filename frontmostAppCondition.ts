@@ -1,13 +1,13 @@
-import type { FrontMostApp } from "./types";
+import type { FrontMostApp as FrontmostApp } from "./types";
 
-export const frontmostAppUnless: FrontMostApp = {
+export const frontmostAppUnlessRemote: FrontmostApp = {
   bundle_identifiers: [
     "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$",
   ],
   type: "frontmost_application_unless",
 };
 
-export const frontmostAppIf: FrontMostApp = {
+export const frontmostAppIfRemote: FrontmostApp = {
   bundle_identifiers: [
     "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$",
   ],

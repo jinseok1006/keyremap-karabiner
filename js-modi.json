@@ -650,7 +650,7 @@
                         {
                             "key_code": "right_arrow",
                             "modifiers": [
-                                "left_contorl",
+                                "left_control",
                                 "left_command"
                             ]
                         }

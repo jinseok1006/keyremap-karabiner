@@ -34,7 +34,7 @@ export const capsLockLeftControlWindows: Manipulator = {
 
 const switchDesktopMappings = [
   { from: "2", to: ["left_arrow", "left_control", "left_command"] },
-  { from: "3", to: ["right_arrow", "left_contorl", "left_command"] },
+  { from: "3", to: ["right_arrow", "left_control", "left_command"] },
 ];
 
 export const switchDesktopReplacementKeysWindows: Manipulator[] =

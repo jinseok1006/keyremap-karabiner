@@ -1,4 +1,4 @@
-import { frontmostAppUnlessRemote } from "./frontmostAppCondition";
+import { frontmostAppIfRemote } from "./frontmostAppCondition";
 import type { Manipulator, Rule } from "./types";
 
 const leftCmd2LeftOpt: Manipulator = {
@@ -12,7 +12,7 @@ const leftCmd2LeftOpt: Manipulator = {
       key_code: "left_option",
     },
   ],
-  conditions: [frontmostAppUnlessRemote],
+  conditions: [frontmostAppIfRemote],
 };
 
 const leftOpt2LeftCmd: Manipulator = {
@@ -26,7 +26,7 @@ const leftOpt2LeftCmd: Manipulator = {
       key_code: "left_command",
     },
   ],
-  conditions: [frontmostAppUnlessRemote],
+  conditions: [frontmostAppIfRemote],
 };
 
 

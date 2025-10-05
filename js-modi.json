@@ -44,7 +44,7 @@
                             "bundle_identifiers": [
                                 "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
                             ],
-                            "type": "frontmost_application_unless"
+                            "type": "frontmost_application_if"
                         }
                     ]
                 },
@@ -64,7 +64,7 @@
                             "bundle_identifiers": [
                                 "^(com\\.microsoft\\.rdc\\.macos|com\\.moonlight-stream\\.Moonlight)$"
                             ],
-                            "type": "frontmost_application_unless"
+                            "type": "frontmost_application_if"
                         }
                     ]
                 }
